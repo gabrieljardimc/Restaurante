@@ -1,6 +1,7 @@
 package br.com.jardim.restaurante.database.model;
 
 import br.com.jardim.restaurante.enums.StatusPedido;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -32,6 +33,7 @@ public class PedidoEntity {
     @JoinColumn(name = "cliente_id")
     private ClienteEntity cliente;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "pedido",
             cascade = CascadeType.ALL)
     private List<ItemPedidoEntity> itens;

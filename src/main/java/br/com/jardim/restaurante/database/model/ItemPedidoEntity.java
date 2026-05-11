@@ -1,5 +1,6 @@
 package br.com.jardim.restaurante.database.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,6 +22,7 @@ public class ItemPedidoEntity {
     private Integer quantidade;
     private BigDecimal subtotal;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "pedido_id")
     private PedidoEntity pedido;
