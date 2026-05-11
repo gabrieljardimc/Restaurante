@@ -36,6 +36,4 @@ public class PedidoEntity {
             cascade = CascadeType.ALL)
     private List<ItemPedidoEntity> itens;
 
-
-
 }
