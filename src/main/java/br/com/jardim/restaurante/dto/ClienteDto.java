@@ -18,6 +18,4 @@ public class ClienteDto {
     @NotBlank
     private String telefone;
 
-    @NotBlank
-    private String endereco;
 }

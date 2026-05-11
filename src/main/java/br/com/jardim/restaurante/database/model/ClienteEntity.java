@@ -19,7 +19,6 @@ public class ClienteEntity {
     private Long id;
     private String nome;
     private String telefone;
-    private String endereco;
 
     @OneToMany(mappedBy = "cliente")
     private List<PedidoEntity> pedidos;

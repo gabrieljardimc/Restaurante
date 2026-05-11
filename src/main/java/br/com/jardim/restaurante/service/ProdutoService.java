@@ -31,7 +31,7 @@ public class ProdutoService {
         return produtoRepository.findAll();
     }
 
-    public  ProdutoEntity buscarId(Long id) throws NotFoundException{
+    public ProdutoEntity buscarId(Long id) throws NotFoundException{
         return produtoRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Produto não encontrado"));
     }
